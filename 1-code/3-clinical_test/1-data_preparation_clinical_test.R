@@ -15,4 +15,6 @@ object
 clinical_test_data <-
   object
 
-save(object, file = "object.rda")
+clinical_test_data
+
+save(clinical_test_data, file = "3-data_analysis/3-clinical_test/1-data_preparation/clinical_test_data.rda")
