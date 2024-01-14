@@ -24,3 +24,10 @@ metabolomics_data@variable_info
 
 colnames(metabolomics_data)
 
+###get the interseaction of colnames of stool_Microbiome and metabolomics_data and lipidomics_data
+
+intersect(intersect(colnames(stool_microbiome_data),colnames(metabolomics_data)), colnames(lipidomics_data))
+
+
+
+
