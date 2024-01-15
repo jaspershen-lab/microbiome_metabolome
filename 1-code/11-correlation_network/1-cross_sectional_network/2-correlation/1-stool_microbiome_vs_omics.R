@@ -41,6 +41,18 @@ dim(metabolomics_data)
 dim(lipidomics_data)
 
 ###For microbiome data, we will use the genus level and relative abundance
-x = 
+stool_microbiome_data <-
 microbiomedataset::summarise_variables(stool_microbiome_data,
-what = "sum_intensity", group_y = "Genus")
+what = "sum_intensity", group_by = "Genus")
+
+dim(stool_microbiome_data)
+rownames(stool_microbiome_data)
+
+stool_microbiome_data$`69-023`
+
+stool_microbiome_data
+
+####only remain the genus that have more than 10% of samples with non-zero values
+stool_microbiome_data  %>% 
+mutate2variable(what = "na_prop")
+
