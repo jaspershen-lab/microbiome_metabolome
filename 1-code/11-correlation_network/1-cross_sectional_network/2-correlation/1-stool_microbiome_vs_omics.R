@@ -8,6 +8,7 @@ rm(list = ls())
 
 setwd(r4projects::get_project_wd())
 
+
 #####load data
 ##stool microbiome
 load("3-data_analysis/11-correlation_network//1-cross_sectional_network//1-data_preparation/stool_microbiome_data.rda")
@@ -53,6 +54,17 @@ stool_microbiome_data$`69-023`
 stool_microbiome_data
 
 ####only remain the genus that have more than 10% of samples with non-zero values
+stool_microbiome_data <-
 stool_microbiome_data  %>% 
-mutate2variable(what = "na_prop")
+mutate2variable(what = "zero_prop")
 
+colnames(stool_microbiome_data@variable_info)
+
+stool_microbiome_data@variable_info$na_prop
+
+
+stool_microbiome_data  %>% 
+activate_microbiome_dataset(what = "variable_info")  %>% 
+pull(na_prop) 
+
+colnames(stool_microbiome_data@variable_info)
