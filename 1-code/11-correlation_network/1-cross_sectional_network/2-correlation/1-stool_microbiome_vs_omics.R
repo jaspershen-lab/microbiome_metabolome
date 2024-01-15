@@ -1,11 +1,15 @@
+# Function to suppress source code output
 no_souce()
 
-library(tidyverse)
-library(tidymass)
-library(microbiomedataset)
+# Load required libraries
+library(tidyverse)        # For data manipulation and visualization
+library(tidymass)        # For mass spectrometry data analysis
+library(microbiomedataset)   # For accessing microbiome datasets
 
+# Clear the workspace
 rm(list = ls())
 
+# Set the working directory to the current project directory
 setwd(r4projects::get_project_wd())
 
 

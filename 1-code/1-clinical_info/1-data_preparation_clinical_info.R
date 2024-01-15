@@ -1,3 +1,7 @@
+# This script prepares the clinical information data for analysis.
+# It loads the necessary libraries, sets the working directory, and loads the data.
+# The loaded data is then saved as "clinical_info_data.rda" for further analysis.
+
 no_source()
 
 library(tidyverse)
